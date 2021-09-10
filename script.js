@@ -9,7 +9,7 @@ addH1.innerText = 'Paleta de Cores';
 
 bodyPai.appendChild(addH1);
 
-// o  2 sera feito
+// o 2 e o 3 foram feitos
 const paletCor = document.createElement('div');
 
 paletCor.id = 'color-palette';
@@ -50,3 +50,76 @@ addClassCor1.style.height = '100px';
 addClassCor1.style.border = border;
 
 paletCor.style.display = 'flex';
+
+// o 4 sera feito
+
+const tabela = document.createElement('div');
+
+tabela.id = 'pixel-board';
+
+bodyPai.appendChild(tabela);
+
+const addClasstabela1 = document.createElement('div');
+addClasstabela1.classList.add('casaPixels');
+const addClasstabela2 = document.createElement('div');
+addClasstabela2.classList.add('casaPixels');
+const addClasstabela3 = document.createElement('div');
+addClasstabela3.classList.add('casaPixels');
+const addClasstabela4 = document.createElement('div');
+addClasstabela4.classList.add('casaPixels');
+const addClasstabela5 = document.createElement('div');
+addClasstabela4.classList.add('casaPixels');
+
+tabela.appendChild(addClasstabela1);
+tabela.appendChild(addClasstabela2);
+tabela.appendChild(addClasstabela3);
+tabela.appendChild(addClasstabela4);
+tabela.appendChild(addClasstabela5);
+
+addClasstabela5.style.backgroundColor = 'white';
+addClasstabela5.style.width = '500px';
+addClasstabela5.style.height = '100px';
+addClasstabela5.style.border = border;
+addClasstabela4.style.backgroundColor = 'white';
+addClasstabela4.style.width = '500px';
+addClasstabela4.style.height = '100px';
+addClasstabela4.style.border = border;
+addClasstabela3.style.backgroundColor = 'white';
+addClasstabela3.style.width = '500px';
+addClasstabela3.style.height = '100px';
+addClasstabela3.style.border = border;
+addClasstabela2.style.backgroundColor = 'white';
+addClasstabela2.style.width = '500px';
+addClasstabela2.style.height = '100px';
+addClasstabela2.style.border = border;
+addClasstabela1.style.backgroundColor = 'white';
+addClasstabela1.style.width = '500px';
+addClasstabela1.style.height = '100px';
+addClasstabela1.style.border = border;
+
+// separaçao da parte 4
+const complement = document.createElement('div');
+complement.classList.add('pixel');
+complement.style.width = '100px';
+complement.style.height = '100px';
+complement.style.border = border;
+complement.style.backgroundColor = "white";
+function criar() {
+  const arr = [
+    addClasstabela1,
+    addClasstabela2,
+    addClasstabela3,
+    addClasstabela4,
+    addClasstabela5,
+  ];
+  for (let i = 0; i < arr.length; i++) {
+    arr[i].style.display = 'flex';
+    arr[i].appendChild(complement.cloneNode());
+    arr[i].appendChild(complement.cloneNode());
+    arr[i].appendChild(complement.cloneNode());
+    arr[i].appendChild(complement.cloneNode());
+    arr[i].appendChild(complement.cloneNode());
+  }
+}
+
+criar();
