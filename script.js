@@ -18,12 +18,17 @@ bodyPai.appendChild(paletCor);
 
 const addClassCor1 = document.createElement('div');
 addClassCor1.classList.add('color');
+addClassCor1.classList.add('selected');
+addClassCor1.addEventListener('click', clicar1);
 const addClassCor2 = document.createElement('div');
 addClassCor2.classList.add('color');
+addClassCor2.addEventListener('click', clicar1);
 const addClassCor3 = document.createElement('div');
 addClassCor3.classList.add('color');
+addClassCor3.addEventListener('click', clicar1);
 const addClassCor4 = document.createElement('div');
 addClassCor4.classList.add('color');
+addClassCor4.addEventListener('click', clicar1);
 
 paletCor.appendChild(addClassCor1);
 paletCor.appendChild(addClassCor2);
@@ -31,23 +36,27 @@ paletCor.appendChild(addClassCor3);
 paletCor.appendChild(addClassCor4);
 
 const border = '1px solid black';
-
+const margin = '5px';
 addClassCor4.style.backgroundColor = 'blue';
-addClassCor4.style.width = '100px';
-addClassCor4.style.height = '100px';
+addClassCor4.style.width = '38px';
+addClassCor4.style.height = '38px';
 addClassCor4.style.border = border;
+addClassCor4.style.margin = margin;
 addClassCor3.style.backgroundColor = 'red';
-addClassCor3.style.width = '100px';
-addClassCor3.style.height = '100px';
+addClassCor3.style.width = '38px';
+addClassCor3.style.height = '38px';
 addClassCor3.style.border = border;
+addClassCor3.style.margin = margin;
 addClassCor2.style.backgroundColor = 'green';
-addClassCor2.style.width = '100px';
-addClassCor2.style.height = '100px';
+addClassCor2.style.width = '38px';
+addClassCor2.style.height = '38px';
 addClassCor2.style.border = border;
+addClassCor2.style.margin = margin;
 addClassCor1.style.backgroundColor = 'black';
-addClassCor1.style.width = '100px';
-addClassCor1.style.height = '100px';
+addClassCor1.style.width = '38px';
+addClassCor1.style.height = '38px';
 addClassCor1.style.border = border;
+addClassCor1.style.margin = margin;
 
 paletCor.style.display = 'flex';
 
@@ -77,33 +86,22 @@ tabela.appendChild(addClasstabela4);
 tabela.appendChild(addClasstabela5);
 
 addClasstabela5.style.backgroundColor = 'white';
-addClasstabela5.style.width = '500px';
-addClasstabela5.style.height = '100px';
-addClasstabela5.style.border = border;
+
 addClasstabela4.style.backgroundColor = 'white';
-addClasstabela4.style.width = '500px';
-addClasstabela4.style.height = '100px';
-addClasstabela4.style.border = border;
+
 addClasstabela3.style.backgroundColor = 'white';
-addClasstabela3.style.width = '500px';
-addClasstabela3.style.height = '100px';
-addClasstabela3.style.border = border;
+
 addClasstabela2.style.backgroundColor = 'white';
-addClasstabela2.style.width = '500px';
-addClasstabela2.style.height = '100px';
-addClasstabela2.style.border = border;
+
 addClasstabela1.style.backgroundColor = 'white';
-addClasstabela1.style.width = '500px';
-addClasstabela1.style.height = '100px';
-addClasstabela1.style.border = border;
 
 // separaçao da parte 4
 const complement = document.createElement('div');
 complement.classList.add('pixel');
-complement.style.width = '100px';
-complement.style.height = '100px';
+complement.style.width = '38px';
+complement.style.height = '38px';
 complement.style.border = border;
-complement.style.backgroundColor = "white";
+complement.style.backgroundColor = 'white';
 function criar() {
   const arr = [
     addClasstabela1,
@@ -123,3 +121,12 @@ function criar() {
 }
 
 criar();
+
+function clicar1(event) {
+  let mudar = document.querySelectorAll('.color');
+  mudar[0].classList.remove("selected");
+  mudar[1].classList.remove("selected");
+  mudar[2].classList.remove("selected");
+  mudar[3].classList.remove("selected");
+  event.target.classList.add('selected');
+}
