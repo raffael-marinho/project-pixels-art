@@ -60,6 +60,22 @@ addClassCor1.style.margin = margin;
 
 paletCor.style.display = 'flex';
 
+// 9 sera feito
+
+const botao = document.createElement('button');
+botao.id = 'clear-board';
+botao.innerText = 'Limpar';
+bodyPai.appendChild(botao);
+botao.style.margin = margin;
+
+function botaoLimpar(abacaxi) {
+  const but = document.querySelectorAll('.pixel');
+  for (let i = 0; i < but.length; i++) {
+    but[i].style.backgroundColor = 'white';
+  }
+}
+
+botao.addEventListener('click', botaoLimpar);
 // o 4 sera feito
 
 const tabela = document.createElement('div');
@@ -98,7 +114,7 @@ addClasstabela1.style.backgroundColor = 'white';
 // separaçao da parte 4
 const complement = document.createElement('div');
 complement.classList.add('pixel');
-complement.setAttribute("onclick","clicar2(this)")
+complement.setAttribute('onclick', 'clicar2(this)');
 complement.style.width = '38px';
 complement.style.height = '38px';
 complement.style.border = border;
@@ -120,19 +136,19 @@ function criar() {
     arr[i].appendChild(complement.cloneNode());
   }
 }
-
+criar();
 // 7 feito
-function clicar1(event) {
+function clicar1(banana) {
   let mudar = document.querySelectorAll('.color');
-  mudar[0].classList.remove("selected");
-  mudar[1].classList.remove("selected");
-  mudar[2].classList.remove("selected");
-  mudar[3].classList.remove("selected");
-  event.target.classList.add('selected');
+  mudar[0].classList.remove('selected');
+  mudar[1].classList.remove('selected');
+  mudar[2].classList.remove('selected');
+  mudar[3].classList.remove('selected');
+  banana.target.classList.add('selected');
 }
 // 8 feito
 function clicar2(ted) {
   let trocar = document.querySelectorAll('pixel');
-  const pegar = document.querySelector(".selected")
+  const pegar = document.querySelector('.selected');
   ted.style.backgroundColor = pegar.style.backgroundColor;
 }
