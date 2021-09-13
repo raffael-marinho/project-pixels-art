@@ -98,6 +98,7 @@ addClasstabela1.style.backgroundColor = 'white';
 // separaçao da parte 4
 const complement = document.createElement('div');
 complement.classList.add('pixel');
+complement.setAttribute("onclick","clicar2(this)")
 complement.style.width = '38px';
 complement.style.height = '38px';
 complement.style.border = border;
@@ -120,8 +121,7 @@ function criar() {
   }
 }
 
-criar();
-
+// 7 feito
 function clicar1(event) {
   let mudar = document.querySelectorAll('.color');
   mudar[0].classList.remove("selected");
@@ -129,4 +129,10 @@ function clicar1(event) {
   mudar[2].classList.remove("selected");
   mudar[3].classList.remove("selected");
   event.target.classList.add('selected');
+}
+// 8 feito
+function clicar2(ted) {
+  let trocar = document.querySelectorAll('pixel');
+  const pegar = document.querySelector(".selected")
+  ted.style.backgroundColor = pegar.style.backgroundColor;
 }
