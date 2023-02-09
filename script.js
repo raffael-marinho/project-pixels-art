@@ -1,3 +1,12 @@
+// 7 feito
+function clicar1(banana) {
+  const mudar = document.querySelectorAll('.color');
+  mudar[0].classList.remove('selected');
+  mudar[1].classList.remove('selected');
+  mudar[2].classList.remove('selected');
+  mudar[3].classList.remove('selected');
+  banana.target.classList.add('selected');
+}
 // o 1 ta feito
 const bodyPai = document.querySelector('body');
 
@@ -68,9 +77,9 @@ botao.innerText = 'Limpar';
 bodyPai.appendChild(botao);
 botao.style.margin = margin;
 
-function botaoLimpar(abacaxi) {
+function botaoLimpar() {
   const but = document.querySelectorAll('.pixel');
-  for (let i = 0; i < but.length; i++) {
+  for (let i = 0; i < but.length; i += 1) {
     but[i].style.backgroundColor = 'white';
   }
 }
@@ -127,7 +136,7 @@ function criar() {
     addClasstabela4,
     addClasstabela5,
   ];
-  for (let i = 0; i < arr.length; i++) {
+  for (let i = 0; i < arr.length; i += 1) {
     arr[i].style.display = 'flex';
     arr[i].appendChild(complement.cloneNode());
     arr[i].appendChild(complement.cloneNode());
@@ -137,18 +146,11 @@ function criar() {
   }
 }
 criar();
-// 7 feito
-function clicar1(banana) {
-  let mudar = document.querySelectorAll('.color');
-  mudar[0].classList.remove('selected');
-  mudar[1].classList.remove('selected');
-  mudar[2].classList.remove('selected');
-  mudar[3].classList.remove('selected');
-  banana.target.classList.add('selected');
-}
 // 8 feito
 function clicar2(ted) {
-  let trocar = document.querySelectorAll('pixel');
+  document.querySelectorAll('pixel');
   const pegar = document.querySelector('.selected');
   ted.style.backgroundColor = pegar.style.backgroundColor;
 }
+
+clicar2();
